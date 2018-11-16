@@ -49,10 +49,10 @@ class _ChatsListState extends State<ChatsList> {
             //crea una ruta para cambiar de paginas / vistas
             onTap: () {
               var route = new MaterialPageRoute(
-                builder: (BuildContext context) => new ChatScreen(),
+                //ENVIAR PARAMETRO A OTRA VISTA
+                builder: (BuildContext context) => new ChatScreen(name: messageData[i].name),
               );
-              Navigator.of(context).push(route)
-
+              Navigator.of(context).push(route);
             },
           )
         ],
