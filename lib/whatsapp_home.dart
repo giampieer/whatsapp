@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp/pages/camera_screen.dart';
+import 'package:whatsapp/pages/chats_screen.dart';
+import 'package:whatsapp/pages/status_screen.dart';
+import 'package:whatsapp/pages/calls_screen.dart';
+
 class WhatsAppHome extends StatefulWidget {
   @override
   _WhatsappHomeSate createState() => new _WhatsappHomeSate();
@@ -32,9 +36,9 @@ class _WhatsappHomeSate extends State<WhatsAppHome> with SingleTickerProviderSta
         controller: _tabController,
           children: <Widget>[
             new CameraScreen(),
-            new CameraScreen(),
-            new CameraScreen(),
-            new CameraScreen()
+            new ChatsScreen(),
+            new StatusScreen(),
+            new CallScreen()
           ],
       ),
     );
