@@ -20,6 +20,31 @@ class _ChatsListState extends State<ChatsList> {
             leading:  new CircleAvatar(
               backgroundImage: NetworkImage(messageData[i].imageUrl),
             ),
+            //Row permite ingresar dos filas
+            title: new Row(
+              //dar espcion entre los 2 elemetos del Row
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                new Text(
+                  messageData[i].name,
+                  //creamos un nuevo estilo para el texto
+                  style: new TextStyle( fontWeight: FontWeight.bold),
+                ),
+                new Text(
+                  messageData[i].time,
+                  //creamos un nuevo estilo para el texto
+                  style: new TextStyle( color: Colors.grey,fontSize: 14.0),
+                )
+              ],
+            ),
+            //AÑADIR UN CONTENIDO EN LA FILA
+            subtitle: new Container(
+              padding: const EdgeInsets.only(top: 5.0),
+              child: new Text(
+                messageData[i].message,
+                style: new TextStyle(color: Colors.grey, fontSize: 15.0),
+              ),
+            )
           )
         ],
       ),
