@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp/screen/camera_screen.dart';
-import 'package:whatsapp/screen/chats_screen.dart';
+import 'package:whatsapp/screen/chats_list.dart';
 import 'package:whatsapp/screen/status_screen.dart';
 import 'package:whatsapp/screen/calls_screen.dart';
 
@@ -30,9 +30,7 @@ class _WhatsappHomeSate extends State<WhatsAppHome>
             new Tab(icon: new Icon(Icons.camera_alt)),
             new Tab(text: "CHATS"),
             new Tab(text: "ESTADOS"),
-            new Tab(
-              text: "LLAMADAS",
-            )
+            new Tab(text: "LLAMADAS",)
           ],
         ),
       ),
@@ -41,7 +39,7 @@ class _WhatsappHomeSate extends State<WhatsAppHome>
         controller: _tabController,
         children: <Widget>[
           new CameraScreen(),
-          new ChatsScreen(),
+          new ChatsList(),
           new StatusScreen(),
           new CallScreen()
         ],
