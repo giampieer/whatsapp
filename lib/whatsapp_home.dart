@@ -30,7 +30,9 @@ class _WhatsappHomeSate extends State<WhatsAppHome>
             new Tab(icon: new Icon(Icons.camera_alt)),
             new Tab(text: "CHATS"),
             new Tab(text: "ESTADOS"),
-            new Tab(text: "LLAMADAS",)
+            new Tab(
+              text: "LLAMADAS",
+            )
           ],
         ),
       ),

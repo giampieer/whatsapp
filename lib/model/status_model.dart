@@ -7,10 +7,10 @@ class StatusModel {
 
   StatusModel({this.name, this.time, this.imgUrl});
 }
-  List<StatusModel> status = [
-    new StatusModel(
-        name: messageData[0].name,
-        time: "12:00",
-        imgUrl: messageData[0].imageUrl
-    ),
-  ];
+
+List<StatusModel> status = [
+  new StatusModel(
+      name: messageData[0].name,
+      time: "12:00",
+      imgUrl: messageData[0].imageUrl),
+];

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp/model/status_model.dart';
-class StatusScreen  extends StatefulWidget {
+
+class StatusScreen extends StatefulWidget {
   @override
   _StatusScreenState createState() => new _StatusScreenState();
 }
+
 class _StatusScreenState extends State<StatusScreen> {
   @override
   Widget build(BuildContext context) {
@@ -13,7 +15,7 @@ class _StatusScreenState extends State<StatusScreen> {
         children: <Widget>[
           new ListTile(
             leading: new CircleAvatar(
-              foregroundColor : Theme.of(context).accentColor,
+              foregroundColor: Theme.of(context).accentColor,
               backgroundColor: Colors.grey,
               backgroundImage: new NetworkImage(status[0].imgUrl),
             ),
@@ -27,11 +29,12 @@ class _StatusScreenState extends State<StatusScreen> {
           ),
           new Text(
             "Recientes",
-            style: new TextStyle(fontWeight: FontWeight.bold,  color: Theme.of(context).primaryColor),
+            style: new TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Theme.of(context).primaryColor),
           )
         ],
       ),
-
     );
   }
 }
