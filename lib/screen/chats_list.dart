@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp/model/chat_model.dart';
+import 'package:whatsapp/screen/chat_screen.dart';
 
 class ChatsList  extends StatefulWidget {
   @override
@@ -44,7 +45,15 @@ class _ChatsListState extends State<ChatsList> {
                 messageData[i].message,
                 style: new TextStyle(color: Colors.grey, fontSize: 15.0),
               ),
-            )
+            ),
+            //crea una ruta para cambiar de paginas / vistas
+            onTap: () {
+              var route = new MaterialPageRoute(
+                builder: (BuildContext context) => new ChatScreen(),
+              );
+              Navigator.of(context).push(route)
+
+            },
           )
         ],
       ),
